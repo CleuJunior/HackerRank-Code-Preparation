@@ -39,4 +39,29 @@ class ResultTest {
         Assertions.assertEquals(expectedResult, Result.plusMinus(listTest));
     }
 
+    @Test
+    public void testCaseThree() {
+        List<Integer> listTest = Arrays.asList(0, 4, -3, 3, -6);
+
+        String expectedResult = "0,400000\n" +
+                                "0,400000\n" +
+                                "0,200000\n";
+
+        Assertions.assertEquals(expectedResult, Result.plusMinus(listTest));
+    }
+
+    @Test
+    public void testCaseFour() {
+        List<Integer> listTest = Arrays.asList(
+                55, 48, 48, 45, 91, 97, 45, 1, 39, 54, 36, 6, 19, 35, 66, 36, 72, 93, 38, 21, 65, 70, 36, 63,
+                39, 76, 82, 26, 67, 29, 24, 82, 62, 53, 1, 50, 47, 65, 67, 19, 66, 90, 77
+        );
+
+        String expectedResult = "1,000000\n" +
+                                "0,000000\n" +
+                                "0,000000\n";
+
+        Assertions.assertEquals(expectedResult, Result.plusMinus(listTest));
+    }
+
 }

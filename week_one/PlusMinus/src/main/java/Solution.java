@@ -15,7 +15,6 @@ public class Solution {
                 .map(Integer::parseInt)
                 .collect(toList());
 
-
         System.out.println(Result.plusMinus(arr));
 
         bufferedReader.close();
